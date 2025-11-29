@@ -1,0 +1,36 @@
+<script>
+// constructor = special method for defining the properties and method of objects
+
+
+function Car(make, model, color, year){
+    this.make = make,
+    this.model = model,
+    this.color = color,
+    this.year = year
+    this.drive = function(){console.log(`you drive ${this.model}`)}
+}
+
+const car1 = new Car("ford","mustang","red",2024)
+const car2 = new Car("chevrolet","camero","blue",2025)
+const car3 = new Car("dodge","charger","black",2026)
+
+console.log(car1.make,car1.model,car1.color,car1.year)
+console.log(car2.make,car2.model,car2.color,car2.year)
+console.log(car3.make,car3.model,car3.color,car3.year)
+
+car1.drive();
+car2.drive();
+car3.drive();
+
+
+
+
+
+
+
+
+
+
+
+
+</script>

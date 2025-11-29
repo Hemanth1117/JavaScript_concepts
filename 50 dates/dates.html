@@ -1,0 +1,72 @@
+<script>
+// date objects = objects that contain values that represent dates and times
+//                these date objects can be changed and formatted
+
+
+const date = new Date()
+console.log(date)
+
+
+// if you would like to create the custom time then
+// Date(year, month, day, hour, minute, second, ms)
+
+const cusdate = new Date(2025, 0, 1, 2, 3, 4, 5)
+console.log(cusdate)
+
+
+// string representation of time to the date constructor
+
+
+const stdate = new Date("2025-01-02T12:00:00Z")
+console.log(stdate)
+
+
+// passing  a amount of time in date constructor in milliseconds
+
+
+const date1= new Date(170000000)
+console.log(date1)
+
+
+
+const date2 = new Date()
+const year = date2.getFullYear()
+const month = date2.getMonth()
+const day = date2.getDay()
+const hour = date2.getHours()
+const minute = date2.getMinutes()
+const second = date2.getSeconds()
+const dayOfweek = date2.getDay()
+
+console.log(year)
+
+
+
+
+
+// set year month 
+
+
+const date3 = new Date()
+date3.setFullYear(2024)
+date3.setMonth(0)
+date3.setDate(2)
+date3.setHours(2)
+date3.setMinutes(2)
+date3.setSeconds(2)
+
+console.log(date3)
+
+
+
+
+
+
+// comparing the two date objects
+
+const date4 = new Date("2023-12-31")
+const date5 = new Date("2024-01-01")
+if (date5 > date4){
+    console.log("Happy New Year")
+}
+</script>

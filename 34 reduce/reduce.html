@@ -1,0 +1,50 @@
+<script>
+// .reduce() = reduce the element of an array to a single value
+
+
+
+// example one
+
+
+let prices = [5, 20, 10, 15, 25, 30]
+
+
+const total = prices.reduce(sum)
+
+console.log(`$${total.toFixed(2)}`)
+
+
+function sum(accumulator, element){
+    // here accumulator is previous element and element is next
+    // for ex accumulator is 0 and next is 5 it return 0 + 5 to accumalator like visevirusa 
+    // nextstep acc = 5 and nex = 20, 5 + 20 = 25 now acc = 25 .....
+
+  return accumulator + element;
+
+}
+ // example two
+ const grades = [75, 50, 90, 65, 70, 80, 95]
+
+
+ const maximumGrade = grades.reduce(maxGrade)
+ console.log(maximumGrade)
+const minimumGrade = grades.reduce(minGrade)
+console.log(minimumGrade)
+ function maxGrade(accumulator, element){
+    return Math.max(accumulator, element)
+ }
+
+ function minGrade(accumulator, element){
+    return Math.min(accumulator, element)
+ }
+
+
+ 
+
+
+
+
+
+
+
+</script>

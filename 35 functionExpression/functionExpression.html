@@ -1,0 +1,80 @@
+<script>
+// function declaration = defines a reusable block of code that performs a specific task
+// example 
+// function hello(){
+//     console.log("hello")
+// }
+// hello()
+
+
+
+
+
+// function expression = a way to define functions as values or variables
+// we will use this more on 
+
+// 1. callbacks in asynchronous operations 
+// 2. Higher-Order functions
+// 3. Closures
+// 4. Event Listeners
+
+
+
+
+
+
+// example one
+
+const hello = function (){
+    console.log("hello")
+}
+
+
+
+// example two
+
+// setTimeout(callback, amount of time we are going to wait to execute this function)
+
+setTimeout(hello, 3000)
+
+
+// example two
+
+// using fun expression 
+
+setTimeout(function(){
+    console.log("this is function expression")
+}, 4000)
+
+// example three using map, filter, reduce
+
+let numbers = [1, 2, 3, 4, 5, 6]
+const squares = numbers.map(function(element){
+    return Math.pow(element, 2)
+})
+console.log(squares)
+
+const cubes = numbers.map(function(element){
+    return Math.pow(element, 3)
+})
+console.log(cubes)
+
+const evenNums = numbers.filter(function(element){
+    return element % 2 === 0;
+})
+console.log(evenNums)
+ 
+
+const oddNums = numbers.filter(function(element){
+    return element % 2 !== 0;
+})
+console.log(oddNums)
+
+
+
+const total = numbers.reduce(function(accumalator, element){
+    return accumalator + element;
+})
+
+console.log(total)
+</script>

@@ -1,0 +1,60 @@
+<script>
+// arrow function = a concise way to write function expressions
+//                  good for simple funtions that you usse only once 
+//                  (parameters) => some code
+                 
+
+
+
+
+// example one 
+
+const hello1 = () => console.log("hello this is arrow fun")
+hello1()
+
+// example two if we need to add more statements we need to use {}
+
+const hello2 = (name) => { 
+    console.log(`hi!, ${name}`)
+    console.log("this multiple line arrow function")
+}
+hello2("hem")
+
+
+
+// example three 
+// function declaration 
+setTimeout(hello, 3000)
+function hello(){
+    console.log("hello, this is an example of function declaration")
+}
+
+
+// function expression
+
+setTimeout(function(){
+    console.log("hello, this is an example of function expression ")
+},4000)
+
+// arrow function
+
+setTimeout(() => (console.log("hello, this is an example of arrow function")), 5000)
+
+
+
+
+// map, filter, reduce using arrow functions
+
+let numbers = [1, 2, 3, 4, 5, 6]
+
+const squares = numbers.map((element) => {return Math.pow(element, 2)})
+const evenNums = numbers.filter((element) => {return element %  2 === 0 })
+const total = numbers.reduce((accumulator, element) => {return accumulator + element})
+
+console.log("map, filter, reduce using arrow functions")
+console.log(squares)
+console.log(evenNums)
+console.log(total)
+
+
+</script>

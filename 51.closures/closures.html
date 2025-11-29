@@ -1,0 +1,151 @@
+<script>
+// closures = A function defined inside of another function,
+//            the inner function has access to the variables
+//            and scope of the outer function.
+//            Allow for private variables and state maintenance
+//            used frequently in js frameworks: React, Vue, Angular
+
+function outer(){
+    let message = "hello";
+    function inner(){
+        console.log(message)
+    }
+    inner(); // if we are not calling inner we won't get output
+}
+
+//if we try to substitute the value dosen't reflects on main variables ex: message= "world"
+
+outer()
+
+// example 2  state maintenance 
+
+
+
+// function increment(){
+//     let count = 0;
+//     count++;
+//     console.log(`count increased to ${count}`)
+// }
+
+// // in this way the count will not update it remains same even if we call it multiple times
+// increment()
+// increment()
+// increment()
+// increment()
+// increment()
+// increment()
+
+
+// example 3
+
+function createcount(){
+    let count = 0;
+    function increments(){
+        count++;
+        console.log(`count increased to ${count}`);
+
+    }
+
+
+    // returning the count value
+    function getCount(){
+        return count
+    }
+
+    // return {increments:increments}
+    return {increments, getCount}  // short hand property
+}
+
+const counter = createcount()
+counter.increments()
+counter.increments()
+counter.increments()
+counter.increments()
+
+console.log(`the current count is ${counter.getCount()}`)
+
+
+
+
+
+//example 2
+
+
+
+// normal function
+
+
+let score = 0;
+
+function increaseScore(points){
+    score += points
+    console.log(`The current score is ${score}pts`)
+}
+
+function decreaseScore(points){
+    score -= points
+    console.log(`The current score is -${score}pts`)
+}
+
+function getScore(){
+    return score
+}
+
+
+
+
+// if we substitute the the gloal variable value score it will change score = 10000000
+
+
+increaseScore(5)
+increaseScore(10)
+increaseScore(12)
+decreaseScore(12)
+
+getScore()
+
+
+
+
+
+// example 3
+// using the closure function
+
+
+function scounter(){
+
+
+    let score = 0;
+
+function increaseScore(points){
+    score += points
+    console.log(`The current score is ${score}pts`)
+}
+
+function decreaseScore(points){
+    score -= points
+    console.log(`The current score is -${score}pts`)
+}
+
+function getScore(){
+    return score
+}
+return {increaseScore, decreaseScore, getScore}
+   
+}
+
+
+const scorecounter = scounter()
+
+scorecounter.increaseScore(5)
+scorecounter.increaseScore(10)
+scorecounter.increaseScore(12)
+scorecounter.decreaseScore(12)
+
+console.log(`The final score is ${scorecounter.getCount()}`)
+
+
+
+
+
+</script>

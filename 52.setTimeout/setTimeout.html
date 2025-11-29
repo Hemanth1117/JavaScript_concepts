@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="starttime()">start</button>
+    <button onclick="cleartime()">clear</button>
+</body>
+
+
+
+
+
+
+
+
+<script>
+// setTimeout() = Function in javascript that allows you to schedule
+//                the execution of a function after an amount of time (milliseconds)
+//                times are approximate
+//                (execution time may vary based on the workload of the javascript runtime env.)
+
+
+//                setTimeout(callback, delay).
+
+// clearTimeout(timeoutid) = can cancel a timeout befor it triggers
+
+
+
+// // example 1
+// function message(){
+//     window.alert("hello")
+// }
+
+// setTimeout(message, 3000)
+
+// // example 2
+
+// setTimeout(function(){window.alert("welcome")},2000)
+// // example 3
+
+// setTimeout(() => window.alert("arrowfunction using sitTimeout"),1000)
+
+
+// // example 4 clearTimeout
+
+// const timeoutid = setTimeout(() => window.alert("arrowfunction using sitTimeout"),1000)
+// clearTimeout(timeoutid)
+
+
+
+let timeoutid;
+const starttime = () => (
+    timeoutid = setTimeout(() => window.alert("hello, this start"), 6000),
+    console.log("starter"))
+const cleartime = () => (
+    clearTimeout(timeoutid), 
+    console.log("clear"))
+
+
+</script>
+
+</html>

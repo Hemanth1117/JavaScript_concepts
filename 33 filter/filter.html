@@ -1,0 +1,83 @@
+<script>
+// .filter() = creates a new array by filtering out elements
+
+
+
+
+// example one
+
+
+let numbers = [1, 2, 3, 4, 5, 6, 7]
+
+let evenNums = numbers.filter(isEven)
+console.log(evenNums)
+let oddNums = numbers.filter(isOdd)
+console.log(oddNums)
+
+
+
+
+
+
+function isEven(element){
+    return element % 2 === 0;
+}
+
+
+function isOdd(element){
+    return element % 2 !== 0;
+}
+
+
+
+
+// example two
+
+
+let ages = [10, 14, 15, 20, 18, 22]
+
+
+
+
+const adults = ages.filter(isAdult)
+console.log(adults)
+const childrens = ages.filter(isChildren)
+console.log(childrens)
+
+function isAdult(element){
+    return element >= 18;
+}
+
+
+function isChildren(element){
+    return element < 18;
+}
+
+
+
+// example three
+
+
+
+let fruits = ["apple", "banana", "orange", "kiwi", "promegranate", "coconut"]
+
+
+const shortWord = fruits.filter(isShort)
+const longWord = fruits.filter(isLong)
+console.log(shortWord)
+console.log(longWord)
+
+function isShort(element){
+    if (element.length <= 6){
+        return element
+    }
+}
+
+function isLong(element){
+    return element.length > 6;
+}
+
+
+
+
+</script>

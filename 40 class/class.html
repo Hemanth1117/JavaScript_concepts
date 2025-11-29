@@ -1,0 +1,41 @@
+<script>
+// class = (Es6 feature) provides a more structured and cleaner way to 
+//          work with objects compared to traditional constructor functions 
+//          ex. static keyword, encapsulation, inheritance
+
+
+class Product{
+    constructor(name, price){
+        this.name = name,
+        this.price = price
+    }
+
+    // inside the class no need to use the function keyword to define the function
+    displayProducts(){
+        console.log(`product: ${this.name}`)
+        console.log(`price: $${this.price.toFixed(2)}`)
+    }
+
+    calculateTotal(salestax){
+        return this.price + (this.price * salestax)
+    }
+}
+
+
+const product1 = new Product("shirt", 19.99)
+const product2 = new Product("pants", 22.39)
+const product3 = new Product("underware", 100.00)
+
+// product1.displayProducts();
+product2.displayProducts();
+product3.displayProducts();
+
+
+const salestax = 0.05;
+
+
+
+const total = product3.calculateTotal(salestax)
+console.log(`Total price (with tax):$${total.toFixed(2)}`)
+
+</script>

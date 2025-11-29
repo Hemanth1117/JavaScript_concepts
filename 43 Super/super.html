@@ -1,0 +1,68 @@
+<script>
+// super: keyword is used in classes to call the constructor or 
+//        access the properties and methods of a parent (superclass)
+//        this = this object
+//        super = the parent
+
+
+
+class Animal{
+    constructor(name, age){
+        this.name = name;
+        this.age = age;
+    }
+    move(){
+        console.log(`This ${this.name} move at a speed of ${speed}mph`)
+    }
+}
+class Rabbit extends Animal{
+    constructor(name, age, runspeed){
+        super(name, age);
+        this.runspeed = runspeed
+    }
+    run(){
+        console.log(`This ${this.name} can run`)
+    }
+}
+class Fish extends Animal{
+    constructor(name, age, swimspeed){
+    super(name,age);
+    this.swimspeed = swimspeed
+    }
+    swim(){
+        console.log(`This ${this.name} can swim`)
+    }
+}
+class Hawk extends Animal{
+    constructor(name, age, flyspeed){
+        super(name, age);
+        this.flyspeed = flyspeed;
+    }
+    fly(){
+        console.log(`This ${this.name} can fly`)
+    }
+}
+
+
+
+
+
+// objects creation
+
+
+
+const rabbit = new Rabbit("rabbit", 10, 25)
+const fish = new Fish("fish", 12, 10)
+const hawk = new Hawk("hawk", 5, 30)
+
+
+
+console.log(rabbit.name)
+console.log(fish.name)
+console.log(hawk.name)
+
+hawk.fly()
+
+
+
+</script>

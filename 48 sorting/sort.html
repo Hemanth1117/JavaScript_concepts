@@ -1,0 +1,62 @@
+<script>
+//  sort() = method used to sort elements of an array in place,
+//           Sorts elements as string in lexicographic order, not alphabetical
+//           lexicographical = (alphabet + number + symbols) as strings.
+
+// example 1
+
+
+let fruits = ["apple", "orange", "banana", "coconut","pineapple"]
+fruits.sort()
+console.log(fruits)
+
+// example  2
+
+
+
+let num = [1,10, 2, 9, 3, 8, 4, 7, 5, 6]
+num.sort()
+console.log(num)     // output : [1, 10, 2, 3, 4, 5, 6, 7, 8, 9]
+// in the above array we haven't sorted the array numerically but in lexicographically
+
+
+// couple extra steps we should take while sorting the numbeers
+
+
+let num1 = [1,10, 2, 9, 3, 8, 4, 7, 5, 6]
+num1.sort((a, b) =>
+    a -b   // for reverse we b-a
+)
+console.log(num1)
+
+
+// example 3
+
+
+
+
+const people = [{name: "spongebob", age: 30, gpa: 3.5},
+    {name: "patrick", age: 37, gpa: 1.5},
+    {name: "squidward", age:51, gpa:4.0},
+    {name: "sandy", age:27, gpa: 2.5}
+]
+
+
+people.sort((a, b) => a.gpa - b.gpa)
+
+console.log(people)
+
+
+
+
+// contains a string within a object there is a different formula
+
+people.sort((a, b) => b.name.localeCompare(a.name))
+
+console.log(people)
+
+
+
+
+
+</script>

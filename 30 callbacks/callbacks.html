@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+    <h1 id="result" style="text-align: center;"></h1>
+    <script>
+
+        // callback = a function that is passed as an argument
+        //            to another function
+
+        
+        
+        
+        // hello()
+        // goodbye()
+
+        // function hello(){
+        //     setTimeout(function (){
+                
+        //         console.log("hello!")
+        //     }, 3000)
+        // }
+        //  function goodbye(){
+        //     console.log("goodbye!")
+        //  }
+// by using callback example one
+        
+        hello(leave)// we should no pass the parameter like goodbye()
+        hello(goodbye)// we should no pass the parameter like goodbye()
+       
+
+        function hello(callback){
+           
+                
+                console.log("hello!")
+                callback()
+        }
+        function leave(){
+            console.log("leave")
+        }
+        function wait(){
+            console.log("wait")
+        }
+         function goodbye(){
+            console.log("goodbye!")
+         }
+
+
+
+    
+// by using callbacks example two
+
+
+
+
+
+         sum(displayPage, 1, 2)
+         sum(displayConsole, 1, 3)
+
+         function sum(callback, x, y){
+            let result = x + y;
+            callback(result)
+         }
+         function displayConsole(result){
+            console.log(result)
+         }
+         function displayPage(result){
+            document.getElementById("result").textContent=result;
+         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

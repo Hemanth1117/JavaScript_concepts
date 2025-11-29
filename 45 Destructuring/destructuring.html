@@ -1,0 +1,102 @@
+<script>
+// destructuring = extracts values from arrays and objects,
+//                 then assign them to variables in a convenient way
+//                 [] = to preform array destructuring
+//                 {} = to preform object destructuring
+
+// ------------EXAMPLE 1-----------
+// SWAP THE VALUE OF TWO VARIABLES
+
+let a = 1;
+let b = 2;
+
+[a,b] = [b,a]
+console.log(a,b)
+
+
+
+//------------EXAMPLE 2------------
+// SWAP TO ELEMENTS IN AN ARRAY
+
+// const colors =["red", "green", "black", "blue", "white"]
+// [colors[0], colors[4]] = [colors[4], colors[0]]
+// console.log(colors)
+
+
+
+//------------EXAMPLE 3------------
+// ASSIGN ARRAY ELEMENTS TO VARIABLES
+
+const color =["red", "green", "black", "blue", "white"]
+const [firstColor, secondColor, thirdColor, ...extraColors] = color
+console.log(firstColor)
+console.log(secondColor)
+console.log(thirdColor)
+console.log(extraColors)
+
+
+
+//------------EXAMPLE 4------------
+// EXTRACT VALUES FROM OBJECTS
+
+const person1 = {
+    firstName : "sponge",
+    lastName : "bob",
+    age : 20,
+    job : "fry cook"
+}
+
+const person2 = {
+    firstName : "patrick",
+    lastName : "squarepants",
+    age : 24,
+   
+}
+
+
+// we can give default value to the variables
+
+const {firstName, lastName, age, job="unemployed"} = person2
+console.log(firstName)
+console.log(lastName)
+console.log(age)
+console.log(job)
+
+
+// ----------EXAMPLE 5-----------
+//  DESTRUCTURE IN FUNCTION PARAMETERS
+
+
+function displayPerson({firstName, lastName, age, job="unemployed"}){
+
+
+    console.log(`hi! ${firstName}${lastName}`)
+    console.log(`His age is ${age}`)
+    console.log(`and occupation is ${job}`)
+
+}
+
+
+
+
+const person3 = {
+    firstName : "sponge",
+    lastName : "bob",
+    age : 20,
+    job : "fry cook"
+}
+
+const person4 = {
+    firstName : "patrick",
+    lastName : "squarepants",
+    age : 24,
+   
+}
+displayPerson(person3)
+
+
+
+
+
+
+</script>
